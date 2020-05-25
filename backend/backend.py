@@ -116,7 +116,6 @@ def Main():
             fulltest_thread = threading.Thread(name='fulltest', target=FullTest())
             fulltest_thread.daemon = True
             fulltest_thread.start()
-            fulltest_thread.join()
             FullTestTick = 0
         else:
             FullTestTick += 1

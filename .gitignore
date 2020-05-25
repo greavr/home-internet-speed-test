@@ -1,30 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@greavr 
-greavr
-/
-zinger
-1
-20
- Code
- Issues 0
- Pull requests 0 Actions
- Projects 0
- Wiki
- Security 0
- Insights
- Settings
-zinger/.gitignore
- rgreaves Moving workplace
-d2502b7 on Mar 26
-143 lines (116 sloc)  2.09 KB
- 
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -110,6 +83,9 @@ target/
 profile_default/
 ipython_config.py
 
+# Visual Studio Code
+.vscode/
+
 # pyenv
 #   For a library or package, you might want to ignore these files since the code is
 #   intended to run in multiple environments; otherwise, check them in:
@@ -164,22 +140,6 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
-
-# static files generated from Django application using `collectstatic`
-media
-static
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
 
 
 # SQLLITE3

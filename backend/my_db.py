@@ -2,9 +2,12 @@ import sqlite3
 import datetime 
 import backend as app
 import logging
+import os
 
 localDB = "speed.db"
 main_conn = None
+#Set OS
+os.environ["localDB"] = os.getcwd() + "\\" + localDB
 
 # TABLE STRUCTURE FOR STATS
 sql_create_stats_table = """ CREATE TABLE IF NOT EXISTS stats (
@@ -35,6 +38,7 @@ def create_table(conn, create_table_sql, table_name):
         logging.debug("Creating table {}".format(table_name))
         cur = conn.cursor()
         cur.execute(create_table_sql)
+
     except sqlite3.Error as e:
         print(e)
 
@@ -86,6 +90,7 @@ def SaveValue(Ping,UploadSpeed="",DownloadSpeed=""):
     finally:
         if (main_conn):
             main_conn.close()
+            
 
 # Function to just save ping results
 def SavePing(PingResult):
