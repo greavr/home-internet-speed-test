@@ -1,4 +1,5 @@
 #!/bin/bash
+cd ~/home-internet-speed-test/
 git pull
 pip3 install -r code/requirements.txt
 python3 code/backend.py &
