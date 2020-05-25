@@ -123,7 +123,7 @@ def Main():
 
         #Debug check db:
         if __debug__:  
-            allResults = my_db.QuickSearch()
+            allResults = my_db.AllPings()
             logging.debug(allResults)
             logging.debug("Tick: " + str(tickCount) )
             logging.debug("Total Pings: {0}, Total Full Tests: {1}".format(str(PingCount),str(FullTestCount)))
