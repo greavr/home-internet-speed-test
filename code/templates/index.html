@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="wrapper">
+    <div class="box a" id="curve_chart">GRAPH GOES HERE</div>
+    <div class="box b">
+        <div><b>IP Address:</b><br /> {{ ip_address }} </div>
+        <hr />
+        <div><b>Hostname:</b><br /> {{ this_hostname }}</div>
+        <hr />
+        <div id="geo-location">Locating..</div>
+        <hr />
+        <div id="LatestPing">Checking...</div>
+    </div>
+</div>
+
+
+
+{% endblock %}

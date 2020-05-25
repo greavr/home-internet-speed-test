@@ -27,7 +27,7 @@ isFull = False
 
 def PingTest():
     s.get_best_server()
-    return round(s.results.dict()["ping"],2)
+    return round(s.results.dict()["ping"],1)
 
 def PingTask():
     # Perform Ping test and save results to local DB

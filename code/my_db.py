@@ -54,14 +54,28 @@ def create_connection(db_file = localDB):
     return conn
 
 # Function to return all rows quickly
-def QuickSearch():
-        # Create Connection to local DB
+def AllPings():
+    # Create Connection to local DB
     main_conn = create_connection()
     # Check that DB exists and table exists
     if main_conn is not None:
         logging.debug("Connected To DB For Quick Search")
         cur = main_conn.cursor()
-        cur.execute("SELECT * FROM ping_stats ORDER BY time_stamp DESC LIMIT 5 ")
+        cur.execute("SELECT * FROM ping_stats ORDER BY time_stamp DESC")
+        rows = cur.fetchall()
+
+        #Return Ping
+        return rows
+
+#Function to get the latest Ping Result
+def GetLatestPing():
+    # Create Connection to local DB
+    main_conn = create_connection()
+    # Check that DB exists and table exists
+    if main_conn is not None:
+        logging.debug("Connected To DB For Quick Search")
+        cur = main_conn.cursor()
+        cur.execute("SELECT * FROM ping_stats ORDER BY time_stamp DESC LIMIT 1 ")
 
         rows = cur.fetchall()
 
